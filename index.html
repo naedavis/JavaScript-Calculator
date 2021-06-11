@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<form name="calculator"> 
+    <link rel="stylesheet" href="./styles.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="main-div">
+        <div class="num-container">
+        <div class="display">
+                <input id="inputid" value="" type="text" placeholder="0" disabled />
+        </div>
+        <div class=" row row1">
+            <button onclick="myFunction('7')" value="7">7</button>
+            <button onclick="myFunction('8')" value="8">8</button>
+            <button onclick="myFunction('9')" value="9">9</button>
+            <button  onclick="myFunction('+')" class="add symbol">+</button>
+            
+        </div>
+        <div class="row row2">
+            <button onclick="myFunction('4')" value="4">4</button>
+            <button onclick="myFunction('5')" value="5">5</button>
+            <button onclick="myFunction('6')" value="6">6</button>
+            <button onclick="myFunction('-')" class="subtract symbol" >-</button>
+            
+        </div>
+        <div class="row row3">
+            <button onclick="myFunction('1')" class="num" value="1">1</button>
+            <button onclick="myFunction('2')" class="num" value="2">2</button>
+            <button onclick="myFunction('3')" class="num" value="3">3</button>
+            <button onclick="myFunction('*')" class="multiply symbol">x</button>
+            
+        </div>
+        <div class="row row4">
+            <button onclick="clearBtn()" class="clear">C</button>
+            <button onclick="myFunction('0')" class="num" value="0">0</button>
+            <button onclick="myFunction('.')" class="decimal symbol">.</button>
+            <button onclick="myFunction('/')" class="divide symbol">÷</button>
+        </div>
+         <div class="equal-container">
+            <button onclick="equal()" class="equal symbol">=</button>
+         </div>
+        </div>
+        
+    </div>
+    <script>
+        function myFunction(value) {
+    document.getElementById("inputid").value += value;
+}
+        function equal() {
+
+    let input = document.getElementById("inputid").value;
+    let sum = eval(input);
+    document.getElementById("inputid").value = sum
+}
+        function clearBtn(){
+    document.getElementById("inputid").value = "";
+    
+}
+
+
+        
+    </script>
+</body>
+</html>
